@@ -8,7 +8,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/student/:name', (req, res) => {
-  const data = {age: 22, department: 'Science'}
+  const data = {age: 22, department: 'Science', subjects: ['Maths','Physics','Chemistry']}
   res.render('student', {student: req.params.name, data: data});
 });
 

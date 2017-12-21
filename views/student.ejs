@@ -17,12 +17,23 @@
     h1 {
       color: white;
       text-align: center;
-      font-size: 40px;
+      font-size: 48px;
+    }
+    h3 {
+      color: white;
+      text-align: center;
+      font-size: 30px;
     }
 
     p {
       font-family: verdana;
       font-size: 20px;
+      text-align: center;
+      color: white;
+    }
+    li {
+      font-family: verdana;
+      font-size: 15px;
       text-align: center;
       color: white;
     }
@@ -33,9 +44,22 @@
 <body>
   <div class="container-fluid">
     <h1>Welcome to the Student Page</h1>
-    <p>You are on Student profile <%= student %>.</p>
-    <p> <strong>Age: </strong> <%= data.age %></p>
-    <p> <strong>Department: </strong> <%= data.department %></p>
+    <p>You are on Student profile
+      <%= student %>.</p>
+    <p> <strong>Age: </strong>
+      <%= data.age %>
+    </p>
+    <p> <strong>Department: </strong>
+      <%= data.department %>
+    </p>
+    <h3>Subjects</h3>
+    <ul>
+      <% data.subjects.forEach((subject) => { %>
+        <li>
+          <%= subject %>
+        </li>
+        <% }); %>
+    </ul>
 
   </div>
 

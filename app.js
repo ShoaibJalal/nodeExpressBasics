@@ -4,8 +4,13 @@ let app = express();
 app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-  res.sendFile(__dirname + '/index.html');
+  res.render('index');
 });
+
+app.get('/about', (req, res) => {
+  res.render('about');
+});
+
 
 app.get('/student/:name', (req, res) => {
   const data = {age: 22, department: 'Science', subjects: ['Maths','Physics','Chemistry']}

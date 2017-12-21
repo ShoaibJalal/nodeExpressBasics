@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>About</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/assets/styles.css" type="text/css" />
+</head>
+
+<body>
+  <% include partials/nav.ejs %>
+    <div class="container-fluid">
+      <h1>ABOUT</h1>
+      <p>You have successfully contacted to Name: <%= data.name %>  Subject: <%= data.subject %> .</p>
+      <p>Company will reply to you at <%= data.email %></p>
+
+    </div>
+
+
+</body>
+
+</html>

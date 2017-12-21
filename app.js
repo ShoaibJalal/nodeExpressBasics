@@ -1,8 +1,9 @@
 const express = require('express');
-
+const bodyParser = require('body-parser');
 let app = express();
 app.set('view engine', 'ejs');
 app.use('/assets', express.static('assets'));
+let urlencodedParser = bodyParser.urlencoded({ extended: false })
 
 app.get('/', (req, res) => {
   res.render('index');
@@ -10,6 +11,10 @@ app.get('/', (req, res) => {
 
 app.get('/about', (req, res) => {
   res.render('about', {qs: req.query});
+});
+app.post('/about',urlencodedParser, (req, res) => {
+  console.log(req.body);
+  res.render('about-success', {data: req.body});
 });
 
 

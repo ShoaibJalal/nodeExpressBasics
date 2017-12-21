@@ -1,13 +1,15 @@
 const express = require('express');
 
 let app = express();
+app.set('view engine', 'ejs');
 
 app.get('/', (req, res) => {
-  res.send('U r at Home Page.');
+  res.sendFile(__dirname + '/index.html');
 });
 
-app.get('/student/:id', (req, res) => {
-  res.send('You are seeing a student with ID of : ' + req.params.id);
+app.get('/student/:name', (req, res) => {
+  const data = {age: 22, department: 'Science'}
+  res.render('student', {student: req.params.name, data: data});
 });
 
 app.listen(3001);

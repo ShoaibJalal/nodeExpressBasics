@@ -1,0 +1,29 @@
+
+
+  body {
+    background-color: lightblue;
+  }
+
+  h1 {
+    color: white;
+    text-align: center;
+    font-size: 48px;
+  }
+  h3 {
+    color: white;
+    text-align: center;
+    font-size: 30px;
+  }
+
+  p {
+    font-family: verdana;
+    font-size: 20px;
+    text-align: center;
+    color: white;
+  }
+  li {
+    font-family: verdana;
+    font-size: 15px;
+    text-align: center;
+    color: white;
+  }
